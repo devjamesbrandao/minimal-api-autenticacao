@@ -25,9 +25,6 @@
 
 <p><strong>* Autenticação:</strong> diz quem você é.</p>
 <p><strong>* Autorização:</strong> diz o que você pode fazer na aplicação.</p>
-<p><strong>* Roles:</strong> são um conjunto de permissões para fazer certas atividades no aplicativo. Por exemplo, para acessar determinada rota da API o funcionário precisa ter a role 'gerente'. Se não tiver, não acessa.</p>
-<p><strong>* Claim:</strong> mais amplo que a role. São atributos do usuário utilizados para autorização. Geralmente são um conjunto chave-valor adicionado ao token JWT.</p>
-<p><strong>* Policy:</strong> utiliza uma lista de claims para permitar ou negar autorização a um usuário.</p>
 <p><strong>* Token JWT</strong></p>
 <p><strong>* Bearer Token</strong></p>
 
