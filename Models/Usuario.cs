@@ -1,4 +1,4 @@
-namespace Autenticacao_Identity
+namespace Autenticacao_Identity.Models
 {
     public class Usuario
     {
@@ -6,5 +6,10 @@ namespace Autenticacao_Identity
         public string Nome { get; set; }
         public string Senha { get; set; }
         public string Role { get; set; }
+
+        public void CleanPassword()
+        {
+            this.Senha = "";
+        }
     }
 }

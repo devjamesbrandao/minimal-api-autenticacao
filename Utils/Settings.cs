@@ -1,4 +1,4 @@
-namespace Autenticacao_Identity
+namespace Autenticacao_Identity.Utils
 {
     public static class Settings
     {

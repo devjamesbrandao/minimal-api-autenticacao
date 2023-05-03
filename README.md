@@ -1,5 +1,7 @@
 <h1 align="center"><strong>ASP.NET 6 Minimal APIs - Autenticação, autorização, roles, claims, JWT Bearer</strong></h1>
 
+# usar CHATGPT para tirar dúvidas
+
 <hr/>
 
 <p align="center">

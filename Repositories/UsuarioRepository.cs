@@ -1,3 +1,7 @@
+using System.Collections.Generic;
+using System.Linq;
+using Autenticacao_Identity.Models;
+
 namespace Autenticacao_Identity.Repositories
 {
     public static class UsuarioRepository

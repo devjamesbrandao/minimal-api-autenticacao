@@ -2,6 +2,8 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Autenticacao_Identity.Models;
+using Autenticacao_Identity.Utils;
 using Microsoft.IdentityModel.Tokens;
 
 namespace Autenticacao_Identity.Service
