@@ -7,6 +7,10 @@
 </p> 
 
 <p align="center">
+    <img src="/img/modal-para-informar-o-token-JWT.png" alt="Modal para adicionar o token JWT de autenticação" title="Modal para adicionar o token JWT de autenticação">
+</p> 
+
+<p align="center">
     <img src="/img/fluxo.jpg" alt="Fluxo autenticação" title="Fluxo autenticação">
 </p> 
 
