@@ -1,13 +1,13 @@
+using System.Reflection;
 using System.Security.Claims;
 using System.Text;
-using Autenticacao_Identity.Configuration;
 using Autenticacao_Identity.DTO;
-using Autenticacao_Identity.Models;
 using Autenticacao_Identity.Repositories;
 using Autenticacao_Identity.Service;
 using Autenticacao_Identity.Utils;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,8 +15,45 @@ builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 
-// Adicionando configuração do swagger com método de extensão
-builder.Services.AddSwaggerConfiguration();
+// Adicionando configuração do swagger
+builder.Services.AddSwaggerGen(x => 
+{
+    x.SwaggerDoc("v1", new OpenApiInfo { Title = "Minimal API com autenticação e autorização", Version = "v1" });
+
+    x.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = @"JWT Authorization header usando o padrão Bearer.  
+                    Adicione 'Bearer' [espaço] e então seu token no input abaixo.
+                    Exemplo: 'Bearer 12345abcdef'",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer"
+    });
+
+    x.AddSecurityRequirement(new OpenApiSecurityRequirement()
+    {
+        {
+        new OpenApiSecurityScheme
+        {
+            Reference = new OpenApiReference
+            {
+                Type = ReferenceType.SecurityScheme,
+                Id = "Bearer"
+            },
+            Scheme = "oauth2",
+            Name = "Bearer",
+            In = ParameterLocation.Header,
+
+            },
+            new List<string>()
+        }
+    });
+
+    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    
+    x.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+});
 
 var key = Encoding.ASCII.GetBytes(Settings.Secret);
 

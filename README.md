@@ -5,6 +5,10 @@
 <hr/>
 
 <p align="center">
+    <img src="/img/configuracao.png" alt="Configuração do swagger" title="Configuração do swagger">
+</p> 
+
+<p align="center">
     <img src="/img/fluxo.jpg" alt="Fluxo autenticação" title="Fluxo autenticação">
 </p> 
 
