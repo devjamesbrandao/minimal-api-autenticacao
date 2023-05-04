@@ -3,14 +3,6 @@
 <hr/>
 
 <p align="center">
-    <img src="/img/configuracao.png" alt="Configuração do swagger" title="Configuração do swagger">
-</p> 
-
-<p align="center">
-    <img src="/img/modal-para-informar-o-token-JWT.png" alt="Modal para adicionar o token JWT de autenticação" title="Modal para adicionar o token JWT de autenticação">
-</p> 
-
-<p align="center">
     <img src="/img/fluxo.jpg" alt="Fluxo autenticação" title="Fluxo autenticação">
 </p> 
 
@@ -22,6 +14,15 @@
     <img src="/img/significado.png" alt="Significados" title="Significados">
 </p> 
 
+### ` Nesse trecho de código - está no Program.cs da aplicação - é onde a magia acontece 🧙‍♂️ `
+<p align="center">
+    <img src="/img/configuracao.png" alt="Configuração do swagger" title="Configuração do swagger">
+</p> 
+
+### ` Modal onde você deve informar o token JWT `
+<p align="center">
+    <img src="/img/modal-para-informar-o-token-JWT.png" alt="Modal para adicionar o token JWT de autenticação" title="Modal para adicionar o token JWT de autenticação">
+</p> 
 
 ### ` 🔍 Sobre`
 
